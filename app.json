@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "HedgeFi",
+    "slug": "hedgefi-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "hedgefi",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0F0F0F"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hedgefi.io",
+      "buildNumber": "2",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "fetch"
+        ],
+        "CFBundleDevelopmentRegion": "en",
+        "LSApplicationQueriesSchemes": [
+          "https"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0F0F0F"
+      },
+      "package": "com.hedgefi.mobile",
+      "versionCode": 1,
+      "permissions": [
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://hedgefi.finance"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://hedgefi.finance"
+      },
+      "eas": {
+        "projectId": "f882e338-a570-4391-9440-3b6946f8e46e"
+      }
+    }
+  }
+}

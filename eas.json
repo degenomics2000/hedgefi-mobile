@@ -1,0 +1,51 @@
+{
+  "cli": {
+    "version": "^16.3.3",
+    "requireCommit": false,
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium"
+      },
+      "env": {
+        "EAS_NO_VCS": "1",
+        "EAS_PROJECT_ROOT": "."
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true,
+        "resourceClass": "m-medium"
+      },
+      "env": {
+        "EAS_NO_VCS": "1",
+        "EAS_PROJECT_ROOT": "."
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "ios": {
+        "resourceClass": "m-medium",
+        "credentialsSource": "local"
+      },
+      "env": {
+        "EAS_NO_VCS": "1",
+        "EAS_PROJECT_ROOT": "."
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "hedgefidev@gmail.com",
+        "ascAppId": "6745317568",
+        "appleTeamId": "2KK3542TT7"
+      }
+    }
+  }
+}
