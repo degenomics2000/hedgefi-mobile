@@ -38,6 +38,11 @@ target 'HedgeFi' do
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'FMT_NO_CHAR8_T=1'
         end
       end
+      if target.name == 'glog'
+        target.build_configurations.each do |config|
+          config.build_settings['GCC_SUPPRESS_WARNINGS'] = 'YES'
+        end
+      end
     end
   end
 end
