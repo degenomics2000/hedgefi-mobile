@@ -29,10 +29,15 @@
     },
     "production": {
       "autoIncrement": true,
+      "platform": "ios",
+      "node": "18.20.4",
       "ios": {
         "resourceClass": "m-medium",
-        "credentialsSource": "local"
+        "credentialsSource": "local",
+        "cocoapods": "1.15.2",
+        "image": "macos-monterey-12.6-xcode-16.1"
       },
+      "workflow": "generic",
       "env": {
         "EAS_NO_VCS": "1",
         "EAS_PROJECT_ROOT": "."
