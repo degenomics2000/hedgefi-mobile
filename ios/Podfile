@@ -36,6 +36,8 @@ target 'HedgeFi' do
         target.build_configurations.each do |config|
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'FMT_NO_CHAR8_T=1'
+          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.1'
+          config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
         end
       end
       if target.name == 'glog'
